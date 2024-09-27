@@ -1,10 +1,10 @@
 "use client";
 
+import axios from "axios";
+import { useEffect, useState, useMemo } from "react";
 import FilterBar from "@/components/FilterBar";
 import Pagination from "@/components/Pagination";
 import ProductsCard from "@/components/ProductsCard";
-import axios from "axios";
-import { useEffect, useState, useMemo } from "react";
 
 export default function Home() {
   const [allProducts, setAllProducts] = useState([]);
@@ -28,7 +28,6 @@ export default function Home() {
       console.error("Error fetching products:", error.message);
     }
   };
-
 
   const filteredProducts = useMemo(() => {
     return allProducts
