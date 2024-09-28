@@ -5,6 +5,7 @@ import { useEffect, useState, useMemo } from "react";
 import FilterBar from "@/components/FilterBar";
 import Pagination from "@/components/Pagination";
 import ProductsCard from "@/components/ProductsCard";
+import Image from "next/image";
 
 export default function Home() {
   const [allProducts, setAllProducts] = useState([]);
@@ -29,7 +30,6 @@ export default function Home() {
     }
   };
 
-
   const filteredProducts = useMemo(() => {
     return allProducts
       .filter(
@@ -41,24 +41,20 @@ export default function Home() {
       );
   }, [allProducts, priceRange, rating]);
 
-
   const paginatedProducts = useMemo(() => {
     const startIndex = (curPage - 1) * limit;
     const endIndex = startIndex + limit;
     return filteredProducts.slice(startIndex, endIndex);
   }, [curPage, filteredProducts, limit]);
 
-
   useEffect(() => {
     setTotalPages(Math.ceil(filteredProducts.length / limit));
     setProducts(paginatedProducts);
   }, [filteredProducts, paginatedProducts]);
 
-
   useEffect(() => {
     fetchAllProducts();
   }, [category]);
-
 
   useEffect(() => {
     if (allProducts.length > 0) {
@@ -98,7 +94,15 @@ export default function Home() {
                 <ProductsCard key={index} product={item} />
               ))
             ) : (
-              <p>No products found</p>
+              <div className="md:h-[75vh] w-full flex justify-evenly items-center">
+                <Image
+                  className="md:mr-16"
+                  src={"/sorry.png"}
+                  alt=""
+                  width={500}
+                  height={500}
+                />
+              </div>
             )}
           </section>
         </main>

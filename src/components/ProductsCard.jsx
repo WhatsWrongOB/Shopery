@@ -9,7 +9,7 @@ const ProductsCard = ({ product }) => {
       <div className="group w-[47%] h-[100%] py-4 sm:py-0 sm:w-[300px] hover:shadow-x-[#00B207] hover:shadow-lg sm:h-[407px] border border-gray-300 rounded-xl relative hover:border-[#2C742F] overflow-hidden">
         <div>
           <Link href={`/details/${product.id}`}>
-            <div className="relative w-[110px] h-[110px] sm:w-[300px] sm:h-[300px] mx-auto"> 
+            <div className="relative w-[110px] h-[110px] sm:w-[300px] sm:h-[300px] mx-auto">
               <Image
                 className="sm:p-10"
                 fill
@@ -32,7 +32,7 @@ const ProductsCard = ({ product }) => {
                 />
               </div>
             </Link>
-            <Link href="/details">
+            <Link href={`/details/${product.id}`}>
               <div className="bg-[#F2F2F2] w-[35px] h-[35px] sm:w-[40px] sm:h-[40px] rounded-full flex justify-center items-center cursor-pointer mb-2">
                 <Image
                   className="w-1/2"
