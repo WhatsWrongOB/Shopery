@@ -36,10 +36,9 @@ export default function Home() {
           product.price >= priceRange.min && product.price <= priceRange.max
       )
       .filter((product) =>
-        rating ? Math.round(product.rating.rate) === rating : true
+        rating ? Math.round(product.rating.rate) == rating : product
       );
   }, [allProducts, priceRange, rating]);
-
 
   const paginatedProducts = useMemo(() => {
     const startIndex = (curPage - 1) * limit;
@@ -47,35 +46,33 @@ export default function Home() {
     return filteredProducts.slice(startIndex, endIndex);
   }, [curPage, filteredProducts, limit]);
 
-
   useEffect(() => {
     setTotalPages(Math.ceil(filteredProducts.length / limit));
     setProducts(paginatedProducts);
   }, [filteredProducts, paginatedProducts]);
 
-
   useEffect(() => {
     fetchAllProducts();
   }, [category]);
 
-
   useEffect(() => {
     if (allProducts.length > 0) {
-      const maxPriceValue = Math.max(...allProducts.map((product) => product.price));
+      const maxPriceValue = Math.max(
+        ...allProducts.map((product) => product.price)
+      );
       setPriceRange((prev) => ({ ...prev, max: maxPriceValue }));
     }
   }, [allProducts]);
 
-
   const newPage = (page) => setCurPage(page);
 
-  
   const getPriceRange = (min, max) => setPriceRange({ min, max });
 
   return (
     <>
       <section className="flex md:flex-row flex-col my-6">
         {/* Sidebar */}
+
         <FilterBar
           selectedCategory={setCategory}
           selectedRating={setRating}
