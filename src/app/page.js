@@ -94,9 +94,9 @@ export default function Home() {
                 <ProductsCard key={index} product={item} />
               ))
             ) : (
-              <div className="md:h-[75vh] w-full flex justify-evenly items-center">
+              <div className="h-[50vh] md:h-[80vh] w-full flex justify-evenly items-center">
                 <Image
-                  className="md:mr-16"
+                  className="md:mr-20"
                   src={"/sorry.png"}
                   alt=""
                   width={500}
@@ -109,11 +109,13 @@ export default function Home() {
       </section>
 
       <div className="flex justify-center items-center my-10">
-        <Pagination
-          noOfPages={totalPages}
-          curPage={curPage}
-          newPage={newPage}
-        />
+        {products.length !== 0 && (
+          <Pagination
+            noOfPages={totalPages}
+            curPage={curPage}
+            newPage={newPage}
+          />
+        )}
       </div>
     </>
   );
