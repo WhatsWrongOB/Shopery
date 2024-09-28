@@ -10,7 +10,7 @@ export default function Home() {
   const [allProducts, setAllProducts] = useState([]);
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState("");
-  const [limit, setLimit] = useState(10);
+  const [limit, setLimit] = useState(12);
   const [curPage, setCurPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const [rating, setRating] = useState(null);
@@ -29,6 +29,7 @@ export default function Home() {
     }
   };
 
+
   const filteredProducts = useMemo(() => {
     return allProducts
       .filter(
@@ -40,20 +41,24 @@ export default function Home() {
       );
   }, [allProducts, priceRange, rating]);
 
+
   const paginatedProducts = useMemo(() => {
     const startIndex = (curPage - 1) * limit;
     const endIndex = startIndex + limit;
     return filteredProducts.slice(startIndex, endIndex);
   }, [curPage, filteredProducts, limit]);
 
+
   useEffect(() => {
     setTotalPages(Math.ceil(filteredProducts.length / limit));
     setProducts(paginatedProducts);
   }, [filteredProducts, paginatedProducts]);
 
+
   useEffect(() => {
     fetchAllProducts();
   }, [category]);
+
 
   useEffect(() => {
     if (allProducts.length > 0) {
