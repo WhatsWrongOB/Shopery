@@ -6,7 +6,6 @@ Welcome to **Shopery**, an e-commerce platform built with **Next.js** that allow
 
 ![Next.js](https://img.shields.io/badge/Next.js-13.0.0-black?style=flat-square&logo=next.js)
 ![React](https://img.shields.io/badge/React-17.0.2-blue?style=flat-square&logo=react)
-![Node.js](https://img.shields.io/badge/Node.js-18.12.1-green?style=flat-square&logo=node.js)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?style=flat-square&logo=javascript)
 
 ## 📚 Table of Contents
