@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛒 Shopery - E-commerce Platform
 
-## Getting Started
+Welcome to **Shopery**, an e-commerce platform built with **Next.js** that allows users to browse products, filter by category, rating, and price, and view detailed information about each product.
 
-First, run the development server:
+## 🚀 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![Next.js](https://img.shields.io/badge/Next.js-13.0.0-black?style=flat-square&logo=next.js)
+![React](https://img.shields.io/badge/React-17.0.2-blue?style=flat-square&logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-18.12.1-green?style=flat-square&logo=node.js)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?style=flat-square&logo=javascript)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📚 Table of Contents
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [API Documentation](#api-documentation)
+5. [License](#license)
+6. [Contact](#contact)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 💡 Features
 
-## Learn More
+This Shopery project includes the following functionalities:
 
-To learn more about Next.js, take a look at the following resources:
+- **Product Browsing:** Users can view a list of products fetched from the **Fake Store API**.
+- **Filtering Options:** Filter products by category, rating, and price.
+- **Product Detail Page:** Click on a product to view detailed information, including images, descriptions, and prices.
+- **Responsive Design:** Optimized for both desktop and mobile viewing.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To run this project locally, follow these steps:
 
-## Deploy on Vercel
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/whatswrongob/Shopery.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd Shopery
+    ```
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+4. Start the development server:
+    ```bash
+    npm run dev
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌐 Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Once the server is running, you can access the application at `http://localhost:3000` to start browsing products.
+
+## 📄 API Documentation
+
+For details about the **Fake Store API**, please refer to the [Fake Store API Documentation](https://fakestoreapi.com/docs).
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
+
+## 📧 Contact
+
+If you have any questions or feedback, feel free to reach out to me:
+
+- Email: [obaidbro9@gmail.com](mailto:obaidbro9@gmail.com)
+- GitHub: [Your GitHub](https://github.com/whatswrongob)
+
+---
+
+Thank you for checking out Shopery! Happy shopping! 🎉
